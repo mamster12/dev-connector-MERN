@@ -37,9 +37,9 @@ const App = () => {
       <Router>
         <Fragment>
           <Navbar />
-          <Alert />
           <Switch>
             <Route exact path="/" component={Landing} />
+            <Alert />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/profiles" component={Profiles} />
