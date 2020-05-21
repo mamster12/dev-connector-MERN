@@ -17,12 +17,12 @@ const Dashboard = ({ getCurrentProfile, auth: { user, loading }, profile: { prof
     }, [getCurrentProfile]);
 
     return (loading && profile === null ? <Spinner /> : (
-        <div className="container">
+        <Fragment>
             <h1 className="large text-primary">
                 Dashboard
       </h1>
             <p className="lead"><i className="fas fa-user"></i> Welcome {user && user.name}</p>
-            {profile !== null ? (
+            {profile !== null && !loading ? (
                 <Fragment>
                     <DashboardActions userID={user._id} />
                     <Experience experience={profile.experience} />
@@ -35,7 +35,7 @@ const Dashboard = ({ getCurrentProfile, auth: { user, loading }, profile: { prof
                     <i className="fas fa-user-minus"></i>{' '}Delete My Account
                     </button>
             </div>
-        </div>)
+        </Fragment>)
     )
 }
 

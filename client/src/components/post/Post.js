@@ -14,7 +14,7 @@ const Post = ({ getPost, match, post: { post, loading }, auth }) => {
         getPost(match.params.id);
     }, [getPost, match.params.id]);
     return loading || post === null ? (<Spinner />) : (
-        <div className="container">
+        <Fragment>
             <Link to='/posts' className='btn'> Back To Posts</Link>
             <Postitem post={post} showActions={false} />
             <CommentForm post={post} />
@@ -29,7 +29,7 @@ const Post = ({ getPost, match, post: { post, loading }, auth }) => {
                 </Fragment>
                 : <em>No comments yet.</em>
             }
-        </div>
+        </Fragment>
     )
 }
 

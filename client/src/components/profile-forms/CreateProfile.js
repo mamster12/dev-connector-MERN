@@ -44,7 +44,7 @@ const CreateProfile = ({ createProfile, history }) => {
         createProfile(formData, history);
     }
     return (
-        <div className="container">
+        <Fragment>
             <h1 className="large text-primary">
                 Create Your Profile
       </h1>
@@ -147,7 +147,7 @@ const CreateProfile = ({ createProfile, history }) => {
                 <input type="submit" className="btn btn-primary my-1" />
                 <Link to="/dashboard" className="btn btn-light my-1" >Go Back</Link>
             </form>
-        </div>
+        </Fragment>
     )
 };
 

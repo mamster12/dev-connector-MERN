@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addExperience } from '../../actions/profile';
@@ -37,7 +37,7 @@ const AddExperience = ({ addExperience, history }) => {
     }
 
     return (
-        <div className="container">
+        <Fragment>
             <h1 className="large text-primary">
                 Add An Experience
       </h1>
@@ -84,7 +84,7 @@ const AddExperience = ({ addExperience, history }) => {
                 <input type="submit" className="btn btn-primary my-1" />
                 <Link to="/dashboard" className="btn btn-light my-1" >Go Back</Link>
             </form>
-        </div>
+        </Fragment>
     )
 }
 

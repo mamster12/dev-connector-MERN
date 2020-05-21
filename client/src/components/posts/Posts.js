@@ -12,7 +12,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
         getPosts();
     }, [getPosts]);
 
-    return loading ? <Spinner /> : <div className="container">
+    return loading ? <Spinner /> : <Fragment>
         <h1 className="large text-primary">
             Posts
         </h1>
@@ -35,7 +35,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
             </Fragment>
         }
 
-    </div>
+    </Fragment>
 }
 
 Posts.propTypes = {
