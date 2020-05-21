@@ -8,7 +8,7 @@ const router = express.Router();
 
 
 // import user model
-const User = require('../../models/User');
+const User = require('../../models/user');
 
 // @router  POST api/users
 // @desc    Register User
