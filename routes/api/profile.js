@@ -3,7 +3,7 @@ const request = require('request');
 const config = require('config');
 const router = express.Router();
 const auth = require('../../middleware/auth');
-const User = require('../../models/user');
+const User = require('../../models/User');
 const { check, validationResult } = require('express-validator');
 
 // import Profile model
