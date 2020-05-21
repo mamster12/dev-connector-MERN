@@ -5,6 +5,7 @@ import {
     DELETE_POST,
     ADD_POST,
     GET_POST,
+    CLEAR_POST,
     ADD_COMMENT,
     REMOVE_COMMENT
 } from '../actions/types';
@@ -67,6 +68,12 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 post: { ...state.post, comments: state.post.comments.filter(comment => comment._id !== payload) },
+                loading: false
+            }
+        case CLEAR_POST:
+            return {
+                ...state,
+                post: null,
                 loading: false
             }
         default:

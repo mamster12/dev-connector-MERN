@@ -7,6 +7,7 @@ import {
     ADD_POST,
     GET_POST,
     DELETE_POST,
+    CLEAR_POST,
     ADD_COMMENT,
     REMOVE_COMMENT
 } from './types';
@@ -90,6 +91,9 @@ export const addPost = text => async dispatch => {
 
 // Get post
 export const getPost = id => async dispatch => {
+    dispatch({
+        type: CLEAR_POST
+    });
     try {
         const res = await axios.get(`/api/posts/${id}`);
 
