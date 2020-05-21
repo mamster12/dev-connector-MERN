@@ -4,7 +4,7 @@ const auth = require('../../middleware/auth');
 const { check, validationResult } = require('express-validator');
 
 // import models
-const User = require('../../models/User');
+const User = require('../../models/user');
 const Profile = require('../../models/Profile');
 const Post = require('../../models/Post');
 
