@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://macvillegas:@devcon67890@cluster0-ovub0.mongodb.net/DevConnect?retryWrites=true&w=majority",
+    "jwtSecret": "thisismysecret",
+    "githubClientId": "84246418599363d5faa6",
+    "githubSecret": "8c34b5cb3e45b85b852a28556171071de6ff0851"
+}
